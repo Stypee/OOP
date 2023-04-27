@@ -5,4 +5,4 @@ def ispis_studenta(student):
 def ispis_svih_studenata(studenti):
     print('Popis svih studenata:')
     for student in studenti:
-        ispis_studenta(student)
+        student.ispis()
