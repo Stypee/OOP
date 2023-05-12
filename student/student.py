@@ -1,8 +1,12 @@
-class Student:
+from abc import ABC, abstractmethod
+
+class Student(ABC):
+
     def __init__(self, ime, prezime, ispit):
         self.ime = ime
         self.prezime = prezime
         self.ispit = ispit
+        
+    @abstractmethod
     def ispis(self):
-        print(f"Student {self.ime} {self.prezime} je prijavio:\n\t Ispit iz kolegija {self.ispit.kolegij.ime} koji će se održati {self.ispit.datum}")
-
+        pass
