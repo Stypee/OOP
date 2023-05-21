@@ -1,3 +1,5 @@
+from iznimke import IznimkaPrazanTekst
+
 def unos_intervala(min, max):
     while True:
         try:
@@ -14,3 +16,15 @@ def unos_intervala(min, max):
 
         else:
             return broj
+
+
+def provjera_informacija(ime, prezime):
+    while True:
+        try:
+            if len(ime) == 0 or len(prezime) == 0:
+                raise IznimkaPrazanTekst()
+
+        except IznimkaPrazanTekst as e:
+            return str(e)
+        else:
+            return None
